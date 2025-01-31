@@ -1,5 +1,5 @@
 let listaDeSorteados = [];
-let maxPossibilidades = 100;
+let maxPossibilidades = 1000;
 let numeroSecreto = gerarRNG();
 let tentativas = 1;
 console.log(numeroSecreto);
@@ -44,10 +44,14 @@ function verificarChute() {
             limpaCampo();
         }
 }
+
+
 function limpaCampo() {
     chute = document.querySelector('input');
     chute.value = '';
 }
+
+
 function gerarRNG(){
     let numeroEscolhido = parseInt(Math.random() * maxPossibilidades + 1)
     let quantElementosSorteados = listaDeSorteados.length;
@@ -65,6 +69,8 @@ function gerarRNG(){
         return numeroEscolhido;
       }
 }
+
+
 //FUNÇÃO PARA RESETAR O JOGO QUANDO O JOGO ACABA
 function resetJogo(){
     numeroSecreto = gerarRNG();
@@ -77,10 +83,10 @@ function resetJogo(){
     tentativas = 1;
 }
 
+
 function exibirMsgInicial(){
     exibirTextoNaTela('h1', 'Jogo do número secreto');
     exibirTextoNaTela('p', `Escolha um número entre 1 e ${maxPossibilidades}`);
-
 }
 
 
