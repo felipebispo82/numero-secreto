@@ -1,5 +1,5 @@
 let listaDeSorteados = [];
-let maxPossibilidades = 500;
+let maxPossibilidades = 5000;
 let numeroSecreto = gerarRNG();
 let tentativas = 1;
 console.log(numeroSecreto);
